@@ -1,0 +1,15 @@
+version = 0.1
+
+[dev]
+[dev.deploy]
+[dev.deploy.parameters]
+stack_name = "import-to-dynamodb-dev"
+s3_bucket = "common-dev-sam-artifactstore"
+s3_prefix = "import-to-dynamodb-dev"
+region = "ap-northeast-1"
+capabilities = "CAPABILITY_IAM CAPABILITY_AUTO_EXPAND CAPABILITY_NAMED_IAM"
+parameter_overrides = """\
+    EnvironmentName=\"dev\" \
+"""
+tags = "project=\"import-to-dynamodb\" env=\"dev\" IaC=\"cfn\""
+confirm_changeset = false
